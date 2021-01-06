@@ -20,12 +20,12 @@
 ## Introduction
 This guide helps developers quickly start with CodeNotary's immudb database and client. It guides you from start to finish with code samples in Node.js, Java, Python, Go, and .Net. After completing the guide, you will have the basic concepts necessary to begin using immudb within your organization.
 
-Note: If you're using another development language, please read up on our [immugw](https://docs.immudb.io/immugw/) option.
+Note: If you're using another development language, please read more about our [immugw](https://docs.immudb.io/immugw/) option.
 
 This section is not yet ready for immudb 0.9. We are working on it in order to improve it and we are close to deliver. Stay tuned!
 
 ### What is immudb?
-A lightweight, high-speed, immutable database solution capable of processing millions of transactions a second. It provides cryptographic verification of your data integrity without the cost and complexity associated with classic blockchain. You have the flexibility to host immudb on-premise or in the cloud.
+A lightweight, high-speed, immutable database solution capable of processing millions of transactions per second. It provides cryptographic verification of your data integrity without the cost and complexity associated with classic blockchain. You have the flexibility to host immudb on-premises or in the cloud.
 
 <table border="0" >
 	<tr>
@@ -50,16 +50,16 @@ A lightweight, high-speed, immutable database solution capable of processing mil
 
 </table>
 
-The immudb is a non-relational, NoSQL database. Data is a collection of key-values with time stamps. You can add records, but deletion or modification isn’t allowed making your data immutable. When a record's value changes over time (such as a bank balance), you can get multiple instances with different time stamps to give you the complete change history of that record. Store a variety of common data types, verification checksums, or JSONs.
+The immudb is a non-relational, NoSQL database. Data is a collection of key-values with time stamps. You can add records, but deletion or modification isn’t allowed, making your data immutable. For records with values that change over time (such as a bank balance), you can add multiple instances with different time stamps to maintain the complete change history of that record. immudb lets you store a variety of common data types, verification checksums, or JSONs.
 
-Depending on your use case, immudb might function as your application's primary or as a secondary database. As a secondary, complimentary database, use immudb to cross-check the data integrity of your important data (by verifying checksums or comparing stored data values). A secondary database enables you to quickly use immudb without completely re-engineering your existing application.
+Depending on your use case, immudb might function as your application's primary or as a secondary database. As a secondary, complimentary database, use immudb to cross-check the data integrity of your important data (by verifying checksums or comparing stored data values). A secondary database enables you to quickly implement immudb without completely re-engineering or disrupting your existing application.
 
 - For additional technical background on immudb and its performance, see the [Readme](https://github.com/codenotary/immudb/blob/master/README.md) within CodeNotary's immudb GitHub Project.
 - For additional information on immudb, see our [documentation](https://docs.immudb.io/).
 
 
 ### Why use immudb?
-<img align="right" src="https://codenotary.io/images/immudb/mascot.png" width="240px"/>It ensures the integrity of your organization's data. While Cyber Security is an important part of your organization’s business plan, immudb provides another layer of security to ensure data integrity even in the event your perimeter is breached during an attack.  Data cannot be deleted or modified once stored into immudb. Additions of new data are logged and auditable, enabling you to view any suspect additions made during the intrusion.
+<img align="right" src="https://codenotary.io/images/immudb/mascot.png" width="240px"/>The purpose of immudb is to ensure the integrity of your organization's data. While Cyber Security is an important part of your organization’s business plan, immudb provides another layer of security to ensure the integrity of your most important and mission-critical data, even if your perimeter is breached during an attack.  Data cannot be deleted or modified once stored into immudb. New data insertion activity is logged and auditable, so you can view and isolated any suspect additions made during an intrusion.
 
 Use cases:
   - Integration with your DevOps ensures code security throughout the development and deployment process. Embed immudb into your [Azure DevOps](https://codenotary.io/blog/securing-your-azure-devops-ecosystem-jenkins-and-kubernetes-aks/) with Jenkins and Kubernetes. Use just [Jenkins](https://codenotary.io/blog/jenkins-build-deployment-pipeline-a-how-to-for-ensuring-integrity/). Alternatively, integrate with [Git Lab](https://codenotary.io/blog/fully-trusted-gitlab-pipeline/) or [GitHub](https://codenotary.io/blog/use-github-actions-for-validated-builds/).
@@ -81,11 +81,11 @@ Use cases:
 
 In this section, you will install the immudb database server. You have the following options for running immudb database server:
 
-  - For those using Docker, get and launch our image from Docker Hub.
+  - **Docker** For those using Docker, get and launch our image from Docker Hub.
 
-  - Download our latest immudb release from GitHub.
+  - **GitHub release** Download our latest immudb release from GitHub.
 
-  - For the sake of brevity, this Quick Start leaves out getting and compiling the immudb source (refer to the Readme [here](https://github.com/codenotary/immudb) to use this method).
+  - **GitHub source compilation** For the sake of brevity, this Quick Start leaves out getting and compiling the immudb source (refer to the Readme [here](https://github.com/codenotary/immudb) to use this method).
 
 
 
@@ -242,7 +242,7 @@ If you're using another language, then read up on our [immugw](https://docs.immu
 ### Connection and authentication
 
 Immudb run on 3323 default port. Here we connecting a client with default options and
-authenticating using default username and password.
+authenticating using the default username and password.
 It's possible to modify defaults on immudb server config folder inside `immudb.toml`
 :::: tabs
 
@@ -353,7 +353,7 @@ If you're using another development language, please read up on our [immugw](htt
 
 ## Conclusion
 
-Congratulations for completing the development quick start guide. You've been guided through the essentials you need to know to begin using CodeNotary's immudb solution.
+Congratulations on completing the development Jumpstart guide. You have the essential knowledge you need to begin using CodeNotary's immudb solution.
 
 You now have:
  - An immudb database server and are familiar with basic authentication.
