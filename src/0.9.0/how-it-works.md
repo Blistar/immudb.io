@@ -2,15 +2,17 @@
 
 Download [immudb short research paper](https://codenotary.com/technologies/immudb/) to have a conceptual understanding of the technical foundations of immudb.
 
-This section is not yet ready for immudb 0.9. We are working on it in order to improve it and we are close to deliver. Stay tuned!
+Essentially the SDK let's you read and write entries in your ledger, with options to add automatic verification to each transaction. Because the database is immutable, you can neither update nor delete an entry after it's committed. However, there is a mechanism to link entries that represent a particular entity whose value changes over time -- like a single bank account, for instance, with a balance that fluctuates. 
+
+Before getting into code samples, you may find it worthwhile to review the high-level descriptions of SDK transactions that follow.
 
 ## Adding data
 
-This section is not yet ready for immudb 0.9. We are working on it in order to improve it and we are close to deliver. Stay tuned!
+Functions used to add a new key-value pair to a ledger are named Set.
 
 ## Checking data consistency
 
-This section is not yet ready for immudb 0.9. We are working on it in order to improve it and we are close to deliver. Stay tuned!
+Functions used to retrieve a ledger entry are named Get. 
 
 ## State signature
 
