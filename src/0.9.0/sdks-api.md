@@ -257,7 +257,7 @@ It's the responsibility of the immudb client to track the server state. That way
 
 ::: tab Go
 The component in charge of state handling is the `StateService`.
-To set up the `stateService` 3 interfaces need to be implemented and provided to the `StateService` constructor:
+To set up the `stateService`, three interfaces need to be implemented and provided to the `StateService` constructor:
 * `Cache` interface in the `cache` package. Standard cache.NewFileCache provides a file state store solution.
 * `StateProvider` in the `stateService` package. It provides a fresh state from immudb server when the client is being initialized for the first time. Standard StateProvider provides a service that retrieve immudb first state hash from a gRPC endpoint.
 * `UUIDProvider` in the `stateService` package. It provides the immudb identifier. This is needed to allow the client to safely connect to multiple immudb instances. Standard UUIDProvider provides the immudb server identifier from a gRPC endpoint.
